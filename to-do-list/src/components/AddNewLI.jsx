@@ -18,7 +18,7 @@ export const AddNewLI = ({addToDoList}) => {
                <label>
                    Add new item to list :
                    <input 
-                   class="input"
+                   className="input"
                     value={newItem}
                     onChange={(event)=>{addNewItem(event.target.value)}}
                    >
