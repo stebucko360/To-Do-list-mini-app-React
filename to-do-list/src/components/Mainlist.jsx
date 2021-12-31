@@ -17,6 +17,7 @@ export const Mainlist = ({toDoList, addToDoList, addCompletedTasks}) => {
         });
         removeItem(listItem);
     };
+    
     let background = 'black';
     const listBackground = () => {
         if (background === 'black') {
@@ -28,10 +29,20 @@ export const Mainlist = ({toDoList, addToDoList, addCompletedTasks}) => {
         };
     };
 
+    const addItemToList = () => {
+       return toDoList.map((listItem) => {
+          const newListItem = <li className={listBackground()} key={listItem}>{listItem}</li>
+          const tick = <button className='complete' onClick={()=>{taskCompleted(listItem)}}>✔</button> 
+          const cross = <button className='remove' onClick={()=>{removeItem(listItem)}}>X</button> 
+            
+          return [newListItem, tick, cross] 
+       })
+    }
     return (
-        <div>
-            <ul className='toDoList'> <span className='toDoTitle'>To-Do:</span> <p></p>
-                {toDoList.map((listItem)=> <li className={listBackground()} key={listItem}>{listItem} <button className='complete' onClick={()=>{taskCompleted(listItem)}}>✔</button> <button className='remove' onClick={()=>{removeItem(listItem)}}>X</button></li>)}
+        <div className='toDoBox'>
+            <h2 className='toDoTitle'>To-Do :</h2>
+            <ul className='toDoList'>
+                {addItemToList()}
             </ul>
         </div>
     )

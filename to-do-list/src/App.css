@@ -28,9 +28,10 @@ h1 {
     border-bottom: 1px solid black;
 }
 
-.toDoList {
+.toDoBox {
     margin-left: 5%;
-    padding-left: 28px;
+    padding-left: 4px;
+    padding-right: 4px;
     border: 1px solid black;
     height: 8cm;
     width: 80%;
@@ -38,11 +39,18 @@ h1 {
     color: black;
     font-family: 'Source Serif 4', sans-serif;
 }
+.toDoList {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    padding-left: 0%;
+}
 
 .toDoTitle {
-    font-size: 0.8cm;
+    font-size: 0.6cm;
     color: white;
     border-bottom: black solid 1px;
+    margin-top: 0%;
 }
 
 .blackItem {
@@ -57,4 +65,33 @@ h1 {
     font-family: 'Source Serif 4', sans-serif;
     font-size: 0.5cm;
     color: white;
+    list-style-type: none;
+    width: 67%;
 }
+
+.additemButton {
+    background-color: black;
+    color: white;
+    border-radius: 9px;
+}
+
+.additemButton:hover {
+    cursor: pointer;
+    background-color: white;
+    color: black;
+}
+
+.complete {
+    background-color: white;
+    color: greenyellow;
+}
+
+.remove {
+    background-color: white;
+    color: red;
+}
+
+.newListItemBox {
+    padding-top: 10px;
+}
+

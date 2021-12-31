@@ -13,9 +13,9 @@ export const AddNewLI = ({addToDoList}) => {
     };
 
     return (
-        <div>
+        <div className='newListItemBox'>
            <form onSubmit={handleSubmit}>
-               <label>
+               <label >
                    Add new item to list :
                    <input 
                    className="input"
@@ -24,7 +24,7 @@ export const AddNewLI = ({addToDoList}) => {
                    >
                    </input>
                </label>
-               <button type="submit">Add this item</button>
+               <button className='additemButton' type="submit">Add this item</button>
                </form> 
         </div>
     )
