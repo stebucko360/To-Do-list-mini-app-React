@@ -1,0 +1,59 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+Pro&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@200&display=swap');
+
+body {
+    background-image: url("./images/background\ todo.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main {
+    background-color: #00000081;
+    color: white;
+    width: 8cm;
+    height: 15cm;
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+    margin-top: 3cm;
+    padding: 40px;
+}
+
+h1 {
+    font-family: 'Source Serif Pro', serif;
+    font-size: 220%;
+    text-align: center;
+    margin-top: 0%;
+    border-bottom: 1px solid black;
+}
+
+.toDoList {
+    margin-left: 5%;
+    padding-left: 28px;
+    border: 1px solid black;
+    height: 8cm;
+    width: 80%;
+    background-color: rgba(255, 255, 255, 0.116);
+    color: black;
+    font-family: 'Source Serif 4', sans-serif;
+}
+
+.toDoTitle {
+    font-size: 0.8cm;
+    color: white;
+}
+
+.blackItem {
+    background-color: rgba(0, 0, 0, 0.404);
+    color: white;
+}
+.whiteItem {
+    background-color: rgba(255, 255, 255, 0.39);
+    color: black;
+}
+
+.blackItem, .whiteItem {
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right: 5px;
+}

@@ -17,10 +17,21 @@ export const Mainlist = ({toDoList, addToDoList, addCompletedTasks}) => {
         });
         removeItem(listItem);
     };
+    let background = 'black';
+    const listBackground = () => {
+        if (background === 'black') {
+            background = 'white';
+            return 'blackItem';
+        } else {
+            background = 'black';
+            return 'whiteItem'
+        };
+    };
+
     return (
         <div>
-            <ol className='toDoList'> To-Do: <p></p>
-                {toDoList.map((listItem)=> <li key={listItem}>{listItem} <button className='complete' onClick={()=>{taskCompleted(listItem)}}>✔</button> <button className='remove' onClick={()=>{removeItem(listItem)}}>X</button></li>)}
+            <ol className='toDoList'> <span className='toDoTitle'>To-Do:</span> <p></p>
+                {toDoList.map((listItem)=> <li className={listBackground()} key={listItem}>{listItem} <button className='complete' onClick={()=>{taskCompleted(listItem)}}>✔</button> <button className='remove' onClick={()=>{removeItem(listItem)}}>X</button></li>)}
             </ol>
         </div>
     )

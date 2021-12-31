@@ -10,9 +10,9 @@ function App() {
   
   const [toDoList, addToDoList] = useState([])
   const [completedTasks, addCompletedTasks] = useState([])
-//console.log(toDoList)
+
   return (
-    <div>
+    <div className="main">
       <Headers/>
       <Mainlist toDoList={toDoList} addToDoList={addToDoList} addCompletedTasks={addCompletedTasks}/>
       <AddNewLI addToDoList={addToDoList}/>
