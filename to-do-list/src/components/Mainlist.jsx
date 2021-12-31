@@ -30,9 +30,9 @@ export const Mainlist = ({toDoList, addToDoList, addCompletedTasks}) => {
 
     return (
         <div>
-            <ol className='toDoList'> <span className='toDoTitle'>To-Do:</span> <p></p>
+            <ul className='toDoList'> <span className='toDoTitle'>To-Do:</span> <p></p>
                 {toDoList.map((listItem)=> <li className={listBackground()} key={listItem}>{listItem} <button className='complete' onClick={()=>{taskCompleted(listItem)}}>✔</button> <button className='remove' onClick={()=>{removeItem(listItem)}}>X</button></li>)}
-            </ol>
+            </ul>
         </div>
     )
 };
